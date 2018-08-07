@@ -51,9 +51,14 @@
     // pass to question for bool return
    
     //get current user
+    Player *currentPlayer = self.players [self.whosTurn];
     if (self.question.answer == input){
-    Player *currentPlayer = 
-    }
+            currentPlayer.lives ++;
+        
+        }else{
+            currentPlayer.lives --;
+        }
+    
     //if true udate score
     //else update lives
     //next turn

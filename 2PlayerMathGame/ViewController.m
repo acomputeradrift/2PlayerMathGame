@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "GameModel.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 
 @end
 
@@ -16,6 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    GameModel *gameModel = [[GameModel alloc] init];
+    self.questionLabel.text = [gameModel getQuestionString];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

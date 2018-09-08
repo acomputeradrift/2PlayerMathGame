@@ -87,13 +87,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7DD2970A21192AED00C92B64 = {
+		7D0CC75021444CBC00886CAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				7DD2974821192B9000C92B64 /* GameModel.h */,
 				7DD2974921192B9000C92B64 /* GameModel.m */,
 				7DD2974B21192B9E00C92B64 /* Player.h */,
 				7DD2974C21192B9E00C92B64 /* Player.m */,
+				7DD2974E2119382D00C92B64 /* Question.h */,
+				7DD2974F2119382D00C92B64 /* Question.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D0CC75121444CCA00886CAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7DD2971921192AED00C92B64 /* ViewController.h */,
+				7DD2971A21192AED00C92B64 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7D0CC75221444CDE00886CAB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7DD2971C21192AED00C92B64 /* Main.storyboard */,
+				7DD2972121192AEE00C92B64 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7DD2970A21192AED00C92B64 = {
+			isa = PBXGroup;
+			children = (
 				7DD2971521192AED00C92B64 /* 2PlayerMathGame */,
 				7DD2972E21192AEF00C92B64 /* 2PlayerMathGameTests */,
 				7DD2973921192AEF00C92B64 /* 2PlayerMathGameUITests */,
@@ -114,17 +141,14 @@
 		7DD2971521192AED00C92B64 /* 2PlayerMathGame */ = {
 			isa = PBXGroup;
 			children = (
-				7DD2971621192AED00C92B64 /* AppDelegate.h */,
-				7DD2971721192AED00C92B64 /* AppDelegate.m */,
-				7DD2971921192AED00C92B64 /* ViewController.h */,
-				7DD2971A21192AED00C92B64 /* ViewController.m */,
-				7DD2971C21192AED00C92B64 /* Main.storyboard */,
+				7D0CC75021444CBC00886CAB /* Model */,
+				7D0CC75121444CCA00886CAB /* Controller */,
+				7D0CC75221444CDE00886CAB /* Storyboards */,
 				7DD2971F21192AEE00C92B64 /* Assets.xcassets */,
-				7DD2972121192AEE00C92B64 /* LaunchScreen.storyboard */,
 				7DD2972421192AEE00C92B64 /* Info.plist */,
 				7DD2972521192AEE00C92B64 /* main.m */,
-				7DD2974E2119382D00C92B64 /* Question.h */,
-				7DD2974F2119382D00C92B64 /* Question.m */,
+				7DD2971621192AED00C92B64 /* AppDelegate.h */,
+				7DD2971721192AED00C92B64 /* AppDelegate.m */,
 			);
 			path = 2PlayerMathGame;
 			sourceTree = "<group>";

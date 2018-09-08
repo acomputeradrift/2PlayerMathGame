@@ -37,15 +37,19 @@
 -(void)nextTurn{
     if (self.whosTurn == 0)
         self.whosTurn = 1;
+        
     else
         self.whosTurn = 0;
-    _question = [[Question alloc] init];
+    
+   // _question = [[Question alloc] init];
 }
 
 - (NSString*) getQuestionString{
     Player *currentPlayer = self.players [self.whosTurn];
     return [NSString stringWithFormat:@"%@ : %@",currentPlayer.name, self.question.question];
 }
+
+
 
 - (void) checkAnswerAgainstInput : (int)input{
     // pass to question for bool return

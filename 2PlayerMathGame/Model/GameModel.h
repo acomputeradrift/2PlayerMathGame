@@ -18,4 +18,5 @@
 
 - (NSString*) getQuestionString;
 - (void) checkAnswerAgainstInput : (int)input;
+-(void)nextTurn;
 @end

@@ -35,13 +35,11 @@
 }
 
 -(void)nextTurn{
-    if (self.whosTurn == 0)
+    if (self.whosTurn == 0){
         self.whosTurn = 1;
-        
-    else
+    }else{
         self.whosTurn = 0;
-    
-   // _question = [[Question alloc] init];
+}
 }
 
 - (NSString*) getQuestionString{

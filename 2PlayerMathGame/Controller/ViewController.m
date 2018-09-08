@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *player1ScoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *player2ScoreLabel;
 @property (nonatomic, strong) NSMutableString *answer;
-
+@property (nonatomic, strong) GameModel *gameModel;
 @end
 
 @implementation ViewController
@@ -23,23 +23,25 @@
     [super viewDidLoad];
      self.player1ScoreLabel.backgroundColor = [UIColor yellowColor];
     
-    GameModel *gameModel = [[GameModel alloc] init];
-    gameModel.whosTurn = 0;
-    self.questionLabel.text = [gameModel getQuestionString];
+    self.gameModel = [[GameModel alloc] init];
+    self.gameModel.whosTurn = 0;
+    self.questionLabel.text = [self.gameModel getQuestionString];
     //self.answer = [gameModel getAnswer];
 
 }
 - (IBAction)pressEnterUIButton:(UIButton *)sender {
-    GameModel *gameModel = [[GameModel alloc] init];
-    [gameModel checkAnswerAgainstInput:[self.answer integerValue]];
-    [gameModel nextTurn];
-    if (gameModel.whosTurn == 0) {
+    NSLog(@"%i", self.gameModel.whosTurn);
+    [self.gameModel checkAnswerAgainstInput:[self.answer integerValue]];
+    [self.gameModel nextTurn];
+    if (self.gameModel.whosTurn == 0) {
         self.player1ScoreLabel.backgroundColor = [UIColor yellowColor];
+        self.player2ScoreLabel.backgroundColor = [UIColor whiteColor];
     }else{
         self.player1ScoreLabel.backgroundColor = [UIColor whiteColor];
         self.player2ScoreLabel.backgroundColor = [UIColor yellowColor];
     }
-    self.questionLabel.text = [gameModel getQuestionString];
+    self.questionLabel.text = [self.gameModel getQuestionString];
+    self.answer = [NSMutableString stringWithFormat:@""];
 }
 
 

@@ -107,15 +107,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="player1ScoreLabel" destination="Chi-kV-v9g" id="vqi-FW-NFZ"/>
-                        <outlet property="player1UILabel" destination="vtl-lS-jGM" id="oWk-BS-T4t"/>
+                        <outlet property="player1ScoreLabel" destination="vtl-lS-jGM" id="dTm-Yj-i2s"/>
                         <outlet property="player2ScoreLabel" destination="Chi-kV-v9g" id="CGd-nF-dvm"/>
                         <outlet property="questionLabel" destination="xCf-UG-tI4" id="0Wq-9H-css"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85.5" y="148.5"/>
+            <point key="canvasLocation" x="67" y="40"/>
         </scene>
     </scenes>
 </document>

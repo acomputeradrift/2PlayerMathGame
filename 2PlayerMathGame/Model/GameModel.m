@@ -13,6 +13,8 @@
 
 @implementation GameModel
 
+ 
+
 - (instancetype)init
 {
     self = [super init];
@@ -50,15 +52,17 @@
 
 
 - (void) checkAnswerAgainstInput : (int)input{
-    // pass to question for bool return
-   
-    //get current user
-    Player *currentPlayer = self.players [self.whosTurn];
-    if (self.question.answer == input){
-            currentPlayer.lives ++;
+    self.answer = [self.question checkIfAnswerIsCorrect:input];
+    self.currentPlayer = self.players [self.whosTurn];
+    if (self.answer == YES){
+            self.currentPlayer.lives ++;
+            NSLog(@"Answer is corect! GameModelClass");
+            NSLog(@"%@ has %li lives. GameModelClass", self.currentPlayer.name, self.currentPlayer.lives);
         
         }else{
-            currentPlayer.lives --;
+            self.currentPlayer.lives --;
+            NSLog(@"Answer is NOT corect! GameModelGlass");
+            NSLog(@"%@ has %li lives. GameModelClass", self.currentPlayer.name, self.currentPlayer.lives);
         }
     
     //if true udate score

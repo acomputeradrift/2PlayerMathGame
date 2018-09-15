@@ -24,8 +24,11 @@
 
 - (BOOL) checkIfAnswerIsCorrect : (int)input{
     if (self.answer == input){
+        NSLog(@"returning yes if %ld is equal to %d QuestionClass", (long)self.answer, input);
         return YES;
+        
     }else{
+        NSLog(@"returning no if %ld is NOT equal to %d QuestionClass", (long)self.answer, input);
         return NO;
     }
 }

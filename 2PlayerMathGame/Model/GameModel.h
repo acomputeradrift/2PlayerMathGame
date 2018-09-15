@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Player.h"
 
 @class Question;
 @interface GameModel : NSObject
-@property (nonatomic, strong)NSMutableArray *players;
+@property (nonatomic, strong)NSMutableArray <Player*> *players;
 @property int whosTurn;
+@property Player *currentPlayer;
 @property (nonatomic, strong) Question *question;
+@property (nonatomic) BOOL answer;
 
 - (void) createPlayer : (int)playerNumber;
 

@@ -134,7 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1I1-bE-pfP">
-                                <rect key="frame" x="109" y="532" width="157" height="82"/>
+                                <rect key="frame" x="0.0" y="532" width="375" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <nil key="textColor"/>
@@ -148,6 +148,7 @@
                         <outlet property="player1ScoreLabel" destination="vtl-lS-jGM" id="dTm-Yj-i2s"/>
                         <outlet property="player2ScoreLabel" destination="Chi-kV-v9g" id="CGd-nF-dvm"/>
                         <outlet property="questionLabel" destination="xCf-UG-tI4" id="0Wq-9H-css"/>
+                        <outlet property="rightOrWrongUILabel" destination="1I1-bE-pfP" id="LnF-vK-is9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

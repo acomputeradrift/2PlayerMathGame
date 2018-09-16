@@ -20,6 +20,6 @@
 - (void) createPlayer : (int)playerNumber;
 
 - (NSString*) getQuestionString;
-- (void) checkAnswerAgainstInput : (int)input;
+- (NSString*) checkAnswerAgainstInput : (int)input;
 -(void)nextTurn;
 @end

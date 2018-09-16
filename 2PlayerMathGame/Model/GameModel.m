@@ -13,7 +13,7 @@
 
 @implementation GameModel
 
- 
+
 
 - (instancetype)init
 {
@@ -22,7 +22,7 @@
         _players = [[NSMutableArray alloc] init];
         [self createPlayer:2];
         _question = [[Question alloc] init];
-    
+        
     }
     return self;
 }
@@ -33,7 +33,6 @@
         Player *thisPlayer = [[Player alloc] initWithIndex:count];
         [self.players addObject:thisPlayer];
     }
-    
 }
 
 -(void)nextTurn{
@@ -41,34 +40,32 @@
         self.whosTurn = 1;
     }else{
         self.whosTurn = 0;
-}
+    }
 }
 
 - (NSString*) getQuestionString{
     Player *currentPlayer = self.players [self.whosTurn];
+    //Question *currentQuestion = [[Question alloc] init];
     return [NSString stringWithFormat:@"%@ : %@",currentPlayer.name, self.question.question];
 }
 
-
-
-- (void) checkAnswerAgainstInput : (int)input{
+- (NSString*) checkAnswerAgainstInput : (int)input{
     self.answer = [self.question checkIfAnswerIsCorrect:input];
     self.currentPlayer = self.players [self.whosTurn];
     if (self.answer == YES){
+        if (self.currentPlayer.lives < 3) {
             self.currentPlayer.lives ++;
-            NSLog(@"Answer is corect! GameModelClass");
-            NSLog(@"%@ has %li lives. GameModelClass", self.currentPlayer.name, self.currentPlayer.lives);
-        
-        }else{
-            self.currentPlayer.lives --;
-            NSLog(@"Answer is NOT corect! GameModelGlass");
-            NSLog(@"%@ has %li lives. GameModelClass", self.currentPlayer.name, self.currentPlayer.lives);
         }
-    
-    //if true udate score
-    //else update lives
-    //next turn
-    
+        return @"Correct!";
+    }else{
+        //NSLog(@"the answer: %@ does not match the input :%@", self.answer)
+        if (self.currentPlayer.lives > 1){
+            self.currentPlayer.lives --;
+            return @"Wrong!";
+        }else{
+            return @"Game over, you lose!";
+        }
+    }
 }
 
 @end
